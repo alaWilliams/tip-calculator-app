@@ -16,6 +16,6 @@
   padding: 1rem;
 }
 
-.section-title {
-  
+input {
+  border: 1px solid black;
 }
