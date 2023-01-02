@@ -6,46 +6,42 @@ const fifteen = document.querySelector('#fifteen');
 const twentyFive = document.querySelector('#twenty-five');
 const fifty = document.querySelector('#fifty');
 const customBtn = document.querySelector('#custom');
+const buttons = document.querySelectorAll('.btn')
+
 
 const split = {
 	total: 0,
 	tip: 0,
 	people: 0,
 };
-const calculateTip = () => {
-  let thing = (split.total * split.tip) / split.people;
-  console.log(thing);
-}
-
-const totalPerPerson = () => {
-  let total = (split.total / split.people) + (split.total * split.tip) / split.people;
-  console.log(total);
-}
 
 billInput.addEventListener('change', () => {
 	split.total = Number(billInput.value);
   calculateTip();
+  totalPerPerson();
+  console.log(split);
 });
 
 numOfPeople.addEventListener('change', () => {
   split.people = Number(numOfPeople.value);
+  calculateTip()
+  totalPerPerson();
   console.log(split)
 })
 
 const handleClick = (btn) => {
   split.tip = Number(btn.value);
+  calculateTip();
+  totalPerPerson();
   console.log(split)
 }
 
-five.addEventListener('click', () => {handleClick(five)})
 
-ten.addEventListener('click', () => {handleClick(ten)})
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {handleClick(btn)
+  })
+});
 
-fifteen.addEventListener('click', () => {handleClick(fifteen)})
-
-twentyFive.addEventListener('click', () => {handleClick(twentyFive)})
-
-fifty.addEventListener('click', () => {handleClick(fifty)})
 
 custom.addEventListener('click', () => {
   custom.type = 'number';
@@ -53,10 +49,22 @@ custom.addEventListener('click', () => {
 
 custom.addEventListener('change', () =>{
   split.tip = Number(custom.value) / 100;
+  calculateTip();
+  totalPerPerson();
   console.log(split);
 } )
 
 
+const calculateTip = () => {
+  const tipPerPerson = (split.total * split.tip) / split.people;
+  //console.log(tipPerPerson);
+  
+}
+
+const totalPerPerson = () => {
+  const total = (split.total / split.people) + (split.total * split.tip) / split.people;
+  console.log(total);
+}
 
 calculateTip();
 

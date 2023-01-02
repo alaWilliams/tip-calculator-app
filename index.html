@@ -18,6 +18,7 @@
 			href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
 			rel="stylesheet"
 		/>
+
 		<link rel="stylesheet" href="style.css" type="text/css" />
 		<title>Tip calculator app</title>
 
@@ -42,43 +43,43 @@
 
 		<section class="section">
 			<h2 class="section-title">Bill</h2>
-			<input type="number" class="bill-amount" placeholder="$0.00" name="bill"/>
+			<input type="number" class="bill-amount input click" placeholder="0.00" name="bill"/>
 
 			<fieldset>
 				<h2 class="section-title">Select Tip %</h2>
 			
 				<div class="tip-button">
-					<button type="button" id="five" class="btn" value="0.05">
+					<button type="button" id="five" class="btn click" value="0.05">
 					5%</button>
 				</div>
 
 				<div class="tip-button">
-					<button type="button" id="ten" class="btn" value="0.1">
+					<button type="button" id="ten" class="btn click" value="0.1">
 					10%</button>
 				</div>
 
 				<div class="tip-button">
-					<button type="button" id="fifteen" class="btn" value="0.15">
+					<button type="button" id="fifteen" class="btn click" value="0.15">
 					15% </button>
 				</div>
 
 				<div class="tip-button">
-					<button type="button" id="twenty-five" class="btn" value="0.25">
+					<button type="button" id="twenty-five" class="btn click" value="0.25">
 					25%</button>
 				</div>
 
 				<div class="tip-button">
-					<button type="button" id="fifty" class="btn" value="0.5">
+					<button type="button" id="fifty" class="btn click" value="0.5">
 					50%</button>
 				</div>
 
 				<div class="custom-button">
-					<input type="button" id="custom" class="btn" value="Custom">
+					<input type="button" id="custom" class="custom input click" value="Custom">
 				</div>
 			</fieldset>
 
 			<h2 class="section-title">Number of People</h2>
-			<input type="number" class="people-amount"/>
+			<input type="number" class="people-amount input click" placeholder="0"/>
 			<div>
 				<div>Tip Amount</div>
 				<div class="person">/ person</div>
@@ -89,7 +90,7 @@
 				<div class="person">/ person</div>
 				<div class="total amount">$0.00</div>
 			</div>
-			<input type="reset" value="Reset" />
+			<input type="reset" value="Reset" class="click"/>
 		</section>
 
 		<div class="attribution">
