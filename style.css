@@ -1,7 +1,6 @@
 * {
   font-family: 'Space Mono', sans-serif;
   font-size: 24px;
-  background-color: hsl(0, 0%, 100%)
 }
 
 .header {
@@ -13,7 +12,7 @@
 }
 
 .section {
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .input {
@@ -21,7 +20,12 @@
   border-radius: 5px;
   text-align: right;
   width: 100%;
-  color: hsl(183, 100%, 15%)
+  color: hsl(183, 100%, 15%);
+  height: 2rem;
+}
+
+.custom {
+  color: hsl(186, 14%, 43%);
 }
 
 .input:focus {
@@ -30,7 +34,14 @@
 
 
 .btn {
-  background-color:hsl(186, 14%, 43%)
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  
+}
+
+.btn:focus {
+  background-color: hsl(172, 67%, 45%);
+  color:hsl(183, 100%, 15%);
 }
 
 .section-title {
@@ -48,4 +59,64 @@
 
 .click {
   cursor: pointer;
+}
+
+.tip-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  justify-items: stretch;
+}
+
+.btn, .custom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  height: 2rem;
+  width: 80%;
+}
+
+.result {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.result-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.amount {
+  font-size: 1.5rem;
+  color: hsl(172, 67%, 45%);
+}
+
+.person {
+  font-size: 0.5rem;
+  color:hsl(186, 14%, 43%)
+}
+
+.result-details {
+  font-size: 0.75rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.reset {
+  background-color: hsl(172, 67%, 45%);
+  width: 100%;
+  border-radius: 5px;
+  color:hsl(183, 100%, 15%);
+  text-align: center;
+}
+
+.error {
+  color: hsl(20, 65%, 74%);
+  font-size: 0.75rem;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
 }
