@@ -26,7 +26,8 @@ billInput.addEventListener('change', () => {
    } 
    else {
     billInput.style.border = 'none';
-    split.total = Number(billInput.value);
+    split.total = Number(billInput.value).toFixed(2);
+    billInput.value = split.total;
     errorBill.innerText = '';
     calculateTip();
     totalPerPerson();
