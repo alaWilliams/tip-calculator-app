@@ -31,7 +31,6 @@ billInput.addEventListener('change', () => {
     calculateTip();
     totalPerPerson();
   }
-	
 }
 );
 
@@ -87,7 +86,6 @@ custom.addEventListener('change', () => {
   } else {
     custom.style.border = '2px solid hsl(20, 65%, 74%)';
   }
- console.log(split);
 } )
 
 
