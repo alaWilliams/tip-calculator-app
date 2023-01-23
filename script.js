@@ -25,9 +25,11 @@ billInput.addEventListener('change', () => {
    errorBill.innerText = 'Must be more than 0'
    } 
    else {
-     split.total = Number(billInput.value);
-     calculateTip();
-     totalPerPerson();
+    billInput.style.border = 'none';
+    split.total = Number(billInput.value);
+    errorBill.innerText = '';
+    calculateTip();
+    totalPerPerson();
   }
 	
 }
@@ -43,15 +45,24 @@ numOfPeople.addEventListener('change', () => {
   errorPeople.innerText = `Must be more than 0`
  }
  else {
-      split.people = Number(numOfPeople.value);
-      calculateTip()
-      totalPerPerson();
-   }
-  
+  split.people = Number(numOfPeople.value);
+  calculateTip()
+  totalPerPerson()
+ }
 })
 
+const buttonReset = () => {
+  buttons.forEach(button => {
+    button.style.backgroundColor = 'hsl(183, 100%, 15%)';
+    button.style.color = 'hsl(0, 0%, 100%)';
+  })
+}
+
 const handleClick = (btn) => {
+  buttonReset();
   split.tip = Number(btn.value);
+  btn.style.backgroundColor = 'hsl(172, 67%, 45%)';
+  btn.style.color = 'hsl(183, 100%, 15%)';
   calculateTip();
   totalPerPerson();
 }
@@ -64,6 +75,7 @@ buttons.forEach(btn => {
 
 
 custom.addEventListener('click', () => {
+  buttonReset();
   custom.type = 'number';
 })
 
