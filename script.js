@@ -7,6 +7,7 @@ const twentyFive = document.querySelector('#twenty-five');
 const fifty = document.querySelector('#fifty');
 const customBtn = document.querySelector('#custom');
 const buttons = document.querySelectorAll('.btn');
+const resetBtn = document.querySelector('.reset');
 const tipAmount = document.querySelector('.tip-amount');
 const total = document.querySelector('.total');
 const errorBill = document.querySelector('.error-bill');
@@ -91,7 +92,7 @@ custom.addEventListener('change', () => {
 
 const calculateTip = () => {
   if (split.total > 0 && split.tip > 0 && split.people) {
-    const tipPerPerson = (split.total * split.tip) / split.people;
+    const tipPerPerson = ((split.total * split.tip) / split.people).toFixed(2);
     tipAmount.innerText = `$${tipPerPerson}`
   }
   ;
@@ -100,11 +101,17 @@ const calculateTip = () => {
 
 const totalPerPerson = () => {
   if (split.total > 0 && split.tip > 0 && split.people) {
-    const totalPerPerson = (split.total / split.people) + (split.total * split.tip) / split.people;
+    const totalPerPerson = ((split.total / split.people) + (split.total * split.tip) / split.people).toFixed(2);
     total.innerText = `$${totalPerPerson}`;
   }
   
 }
+
+ resetBtn.addEventListener('click', () => {
+  billInput.value = 0;
+  buttonReset();
+  numOfPeople.value = 0;
+ } )
 
 calculateTip();
 
