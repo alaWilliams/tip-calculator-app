@@ -27,7 +27,8 @@ billInput.addEventListener('change', () => {
    } 
    else {
     billInput.style.border = 'none';
-    split.total = Number(billInput.value);
+    split.total = (Number(billInput.value)).toFixed(2);
+    billInput.value = split.total;
     errorBill.innerText = '';
     calculateTip();
     totalPerPerson();
@@ -37,15 +38,18 @@ billInput.addEventListener('change', () => {
 
 numOfPeople.addEventListener('change', () => {
   if (Number(numOfPeople.value) === 0 ) {
-    billInput.style.border = '2px solid hsl(20, 65%, 74%)'
+    numOfPeople.style.border = '2px solid hsl(20, 65%, 74%)'
     errorPeople.innerText = `Can't be 0`
     } 
  if (Number(numOfPeople.value) < 0 ) {
-  billInput.style.border = '2px solid hsl(20, 65%, 74%)'
+  numOfPeople.style.border = '2px solid hsl(20, 65%, 74%)'
   errorPeople.innerText = `Must be more than 0`
  }
  else {
-  split.people = Number(numOfPeople.value);
+  numOfPeople.style.border = 'none';
+  errorPeople.innerText = '';
+  split.people = (Number(numOfPeople.value)).toFixed(0);
+  numOfPeople.value = split.people;
   calculateTip()
   totalPerPerson()
  }
@@ -56,6 +60,9 @@ const buttonReset = () => {
     button.style.backgroundColor = 'hsl(183, 100%, 15%)';
     button.style.color = 'hsl(0, 0%, 100%)';
   })
+  custom.type = 'button';
+  custom.value = 'Custom';
+  custom.style.border = 'none';
 }
 
 const handleClick = (btn) => {
@@ -111,6 +118,8 @@ const totalPerPerson = () => {
   billInput.value = 0;
   buttonReset();
   numOfPeople.value = 0;
+  tipAmount.innerText = '$0';
+  total.innerText = '$0'
  } )
 
 calculateTip();

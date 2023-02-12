@@ -1,117 +1,154 @@
 * {
-  font-family: 'Space Mono', sans-serif;
-  font-size: 24px;
+	font-family: 'Space Mono', sans-serif;
+	font-size: 24px;
 }
 
 .header {
-  text-align: center;
-  letter-spacing: 1rem;
-  padding: 2rem;
-  color: hsl(186, 14%, 43%);
-  background-color:  hsl(185, 41%, 84%);
+	text-align: center;
+	letter-spacing: 1rem;
+	padding: 2rem;
+	color: hsl(186, 14%, 43%);
+	background-color: hsl(185, 41%, 84%);
 }
 
 .section {
-  padding: 2rem;
+	padding: 2rem;
+  background-color: hsl(0, 0%, 100%);
 }
 
 .input {
-  background-color: hsl(189, 41%, 97%);
-  border-radius: 5px;
-  text-align: right;
-  width: 100%;
-  color: hsl(183, 100%, 15%);
-  height: 2rem;
+	background-color: hsl(189, 41%, 97%);
+	border-radius: 5px;
+	text-align: right;
+	width: 100%;
+	color: hsl(183, 100%, 15%);
+	height: 2rem;
 }
 
 .custom {
-  color: hsl(186, 14%, 43%);
+	color: hsl(186, 14%, 43%);
 }
 
 .input:focus {
-  border: 2px solid hsl(172, 67%, 45%)
+	border: 2px solid hsl(172, 67%, 45%);
 }
 
-
 .btn {
-  background-color: hsl(183, 100%, 15%);
-  color: hsl(0, 0%, 100%);
-  
+	background-color: hsl(183, 100%, 15%);
+	color: hsl(0, 0%, 100%);
 }
 
 .section-title {
-  font-size: 0.75rem;
-  color: hsl(186, 14%, 43%);
+	font-size: 0.75rem;
+	color: hsl(186, 14%, 43%);
+	margin-bottom: 0.25rem;
 }
 
 .bill-amount {
-  background: hsl(189, 41%, 97%) url('./images/icon-dollar.svg') no-repeat left;
+	background: hsl(189, 41%, 97%) url('./images/icon-dollar.svg') no-repeat left;
 }
 
 .people-amount {
-  background: hsl(189, 41%, 97%) url('./images/icon-person.svg') no-repeat left;
+	background: hsl(189, 41%, 97%) url('./images/icon-person.svg') no-repeat left;
 }
 
 .click {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .tip-form {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  justify-items: stretch;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+	justify-items: stretch;
 }
 
-.btn, .custom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  height: 2rem;
-  width: 80%;
+.btn,
+.custom {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	height: 2rem;
+	width: 80%;
 }
 
 .result {
-  background-color: hsl(183, 100%, 15%);
-  border-radius: 10px;
-  padding: 1rem;
+	background-color: hsl(183, 100%, 15%);
+	border-radius: 10px;
+	padding: 1rem;
 }
 
 .result-section {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .amount {
-  font-size: 1.5rem;
-  color: hsl(172, 67%, 45%);
+	font-size: 1.5rem;
+	color: hsl(172, 67%, 45%);
 }
 
 .person {
-  font-size: 0.5rem;
-  color:hsl(186, 14%, 43%)
+	font-size: 0.5rem;
+	color: hsl(186, 14%, 43%);
 }
 
 .result-details {
-  font-size: 0.75rem;
-  color: hsl(0, 0%, 100%);
+	font-size: 0.75rem;
+	color: hsl(0, 0%, 100%);
 }
 
 .reset {
-  background-color: hsl(172, 67%, 45%);
-  width: 100%;
-  border-radius: 5px;
-  color:hsl(183, 100%, 15%);
-  text-align: center;
+	background-color: hsl(172, 67%, 45%);
+	width: 100%;
+	border-radius: 5px;
+	color: hsl(183, 100%, 15%);
+	text-align: center;
 }
 
 .error {
-  color: hsl(20, 65%, 74%);
-  font-size: 0.75rem;
+	color: hsl(20, 65%, 74%);
+	font-size: 0.75rem;
 }
 
 .title {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
+
+.section-bill,
+.tip-section,
+.people-section {
+	padding: 0.75rem 0;
+}
+
+@media screen and (min-width: 768px) {
+	.btn,
+	.custom {
+		height: 2.5rem;
+	}
+
+	.tip-form > * {
+		width: 10rem;
+		justify-self: center;
+	}
+
+	.result-section {
+		max-width: 20rem;
+	}
+
+	.reset {
+		max-width: 70%;
+		margin: auto;
+		display: block;
+	}
+
+	.result > * {
+		margin: auto;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+
+  }
