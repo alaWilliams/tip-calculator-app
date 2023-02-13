@@ -41,103 +41,108 @@
 		</header>
 
 		<div class="section">
-			<div class="section-bill">
-				<div class="title">
-					<h2 class="section-title">Bill</h2>
-					<div class="error error-bill"></div>
-				</div>
-				<input
-					type="number"
-					class="bill-amount input click"
-					placeholder="0"
-					name="bill"
-					min="0.01"
-					step="0.01"
-				/>
-			</div>
-
-			<fieldset>
-				<div class="tip-section">
-				<h2 class="section-title">Select Tip %</h2>
-
-				<div class="tip-form">
-					<div class="tip-button">
-						<button type="button" id="five" class="btn click" value="0.05">
-							5%
-						</button>
-					</div>
-
-					<div class="tip-button">
-						<button type="button" id="ten" class="btn click" value="0.1">
-							10%
-						</button>
-					</div>
-
-					<div class="tip-button">
-						<button type="button" id="fifteen" class="btn click" value="0.15">
-							15%
-						</button>
-					</div>
-
-					<div class="tip-button">
-						<button
-							type="button"
-							id="twenty-five"
-							class="btn click"
-							value="0.25"
-						>
-							25%
-						</button>
-					</div>
-
-					<div class="tip-button">
-						<button type="button" id="fifty" class="btn click" value="0.5">
-							50%
-						</button>
-					</div>
-
-					<div class="custom-button">
+			<div class="section-wrapper">
+				<div class="input-wrapper">
+					<div class="section-bill">
+						<div class="title">
+							<h2 class="section-title">Bill</h2>
+							<div class="error error-bill"></div>
+						</div>
 						<input
-							type="button"
-							id="custom"
-							class="custom input click"
-							value="Custom"
+							type="number"
+							class="bill-amount input click"
+							placeholder="0"
+							name="bill"
+							min="0.01"
+							step="0.01"
 						/>
 					</div>
-				</div>
-				</div>
-			</fieldset>
 
-			<div class="people-section">
-				<div class="title">
-					<h2 class="section-title">Number of People</h2>
-					<div class="error error-people"></div>
-				</div>
-				<input type="number" class="people-amount input click" placeholder="0" />
-			</div>
-			<div class="result">
-				<div class="result-section">
-					<div class="left">
-						<div class="result-details">Tip Amount</div>
-						<div class="person">/ person</div>
+					<fieldset>
+						<div class="tip-section">
+						<h2 class="section-title">Select Tip %</h2>
+
+						<div class="tip-form">
+							<div class="tip-button">
+								<button type="button" id="five" class="btn click" value="0.05">
+									5%
+								</button>
+							</div>
+
+							<div class="tip-button">
+								<button type="button" id="ten" class="btn click" value="0.1">
+									10%
+								</button>
+							</div>
+
+							<div class="tip-button">
+								<button type="button" id="fifteen" class="btn click" value="0.15">
+									15%
+								</button>
+							</div>
+
+							<div class="tip-button">
+								<button
+									type="button"
+									id="twenty-five"
+									class="btn click"
+									value="0.25"
+								>
+									25%
+								</button>
+							</div>
+
+							<div class="tip-button">
+								<button type="button" id="fifty" class="btn click" value="0.5">
+									50%
+								</button>
+							</div>
+
+							<div class="custom-button">
+								<input
+									type="button"
+									id="custom"
+									class="custom input click"
+									value="Custom"
+								/>
+							</div>
+						</div>
+						</div>
+					</fieldset>
+
+					<div class="people-section">
+						<div class="title">
+							<h2 class="section-title">Number of People</h2>
+							<div class="error error-people"></div>
+						</div>
+						<input type="number" class="people-amount input click" placeholder="0" />
 					</div>
-					<div class="tip-amount amount">$0</div>
 				</div>
-
-				<div class="result-section">
-					<div class="left">
-						<div class="result-details">Total</div>
-							<div class="person">/ person</div>
-					</div>
-							<div class="total amount">$0</div>
-				</div>
-
-				<input type="reset" value="RESET" class="click reset" />
-				</div>
-			</div>
 
 				
-			</div>
+				<div class="result">
+					<div class="result-section">
+						<div class="left">
+							<div class="result-details">Tip Amount</div>
+							<div class="person">/ person</div>
+						</div>
+						<div class="tip-amount amount">$0</div>
+					</div>
+
+					<div class="result-section">
+						<div class="left">
+							<div class="result-details">Total</div>
+								<div class="person">/ person</div>
+						</div>
+								<div class="total amount">$0</div>
+					</div>
+
+					<input type="reset" value="RESET" class="click reset" />
+					</div>
+				</div>
+
+					
+				</div>
 		</section>
 
 		<div class="attribution">

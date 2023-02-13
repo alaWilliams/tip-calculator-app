@@ -61,6 +61,7 @@
 	grid-template-columns: repeat(2, 1fr);
 	gap: 1rem;
 	justify-items: stretch;
+
 }
 
 .btn,
@@ -130,7 +131,7 @@
 	}
 
 	.tip-form > * {
-		width: 10rem;
+    width: 80%;
 		justify-self: center;
 	}
 
@@ -150,5 +151,47 @@
 }
 
 @media screen and (min-width: 1200px) {
-
+  .section-wrapper {
+    background-color: hsl(0, 0%, 100%);
+    padding: 1.5rem;
+    border-radius: 10px;
+    height: 50vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    
   }
+
+  .section {
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .section-wrapper > * {
+    width: 50%;
+  }
+
+  .result {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-wrapper > * {
+    width: 100%;
+  }
+  
+  .input-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .tip-form {
+  }
+}
+
+  
