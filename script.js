@@ -15,30 +15,24 @@ const errorPeople = document.querySelector('.error-people');
 
 
 const split = {
-	total: 0,
+	total: '',
 	tip: '',
-	people: 0,
+	people: '',
 };
 
 billInput.addEventListener('change', () => {
   if (Number(billInput.value) <= 0) {
-    console.log(split)
    billInput.style.border = '2px solid hsl(20, 65%, 74%)';
    errorBill.innerText = 'Must be more than 0';
    split.total = (Number(billInput.value)).toFixed(2) / 1;
-   console.log(split)
-
    } 
    else {   
-    console.log(split)
     billInput.style.border = 'none';
     split.total = (Number(billInput.value)).toFixed(2) / 1;
     billInput.value = split.total;
     errorBill.innerText = '';
     calculateTip();
     totalPerPerson();
-    console.log(split)
-
   }
 }
 );
@@ -47,8 +41,9 @@ numOfPeople.addEventListener('change', () => {
  if (Number(numOfPeople.value) <= 0 ) {
   numOfPeople.style.border = '2px solid hsl(20, 65%, 74%)'
   errorPeople.innerText = `Must be more than 0`;
-  split.people = (Number(numOfPeople.value)).toFixed(0);
-  console.log(split);
+  split.people = (Number(numOfPeople.value)).toFixed(0) / 1;
+  calculateTip();
+  totalPerPerson
  }
  else {
   numOfPeople.style.border = 'none';
@@ -57,7 +52,6 @@ numOfPeople.addEventListener('change', () => {
   numOfPeople.value = split.people;
   calculateTip()
   totalPerPerson()
-  console.log(split);
  }
 })
 
@@ -94,47 +88,50 @@ custom.addEventListener('click', () => {
 
 custom.addEventListener('change', () => {
   if (Number(custom.value) > 0) {
-    split.tip = Number(custom.value) / 100;
+    split.tip = (Number(custom.value)).toFixed(0) / 100;
     calculateTip();
     totalPerPerson();
+    custom.value = split.tip * 100;
     console.log(split)
+  }
   if (Number(custom.value) === 0) {
     split.tip = 0;
     calculateTip();
     totalPerPerson();
     console.log(split)
   }
-  } else {
+  else {
     custom.style.border = '2px solid hsl(20, 65%, 74%)';
     tipAmount.innerText = '$0';
     total.innerText = '$0'
+    calculateTip();
+    totalPerPerson();
     console.log(split);
   }
 } )
 
 
 const calculateTip = () => {
-  if (split.total <= 0 || split.people <= 0) {
-    tipAmount.innerText = '$0';
+  if (split.people <= 0 || split.total <= 0) {
+    tipAmount.innerText = '$0'
+    console.log(split)
   }
   if (split.tip === 0 && split.total > 0 && split.people > 0){
-    const tipPerPerson = (split.total / split.people).toFixed(2);
+    const tipPerPerson = 0
     tipAmount.innerText = `$${tipPerPerson}`
   }
   if (split.total > 0 && split.people > 0 && split.tip > 0) {
     const tipPerPerson = ((split.total * split.tip) / split.people).toFixed(2);
     tipAmount.innerText = `$${tipPerPerson}`
   }
-  ;
-  
-}
+};
 
 const totalPerPerson = () => {
   if (split.total <= 0 || split.people <= 0) {
-    total.innerText = `$0`
+    total.innerText = '$0'
   }
   if (split.tip === 0 && split.total > 0 && split.people > 0){
-    const totalPerPerson = ((split.total / split.people) + split.total / split.people).toFixed(2);
+    const totalPerPerson = (split.total/split.people).toFixed(2);
     total.innerText = `$${totalPerPerson}`}
   if (split.total > 0 && split.tip > 0 && split.people > 0) {
     const totalPerPerson = ((split.total / split.people) + (split.total * split.tip) / split.people).toFixed(2);
@@ -144,7 +141,6 @@ const totalPerPerson = () => {
 }
 
  resetBtn.addEventListener('click', () => {
-  console.log(split)
   total.value = 0;
   buttonReset();
   numOfPeople.value = 0;
@@ -154,7 +150,6 @@ const totalPerPerson = () => {
   split.people = 0;
   split.tip = 0;
   split.total = 0;
-  console.log(split)
  } )
 
 calculateTip();
