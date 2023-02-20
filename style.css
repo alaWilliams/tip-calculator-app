@@ -13,7 +13,7 @@
 
 .section {
 	padding: 2rem;
-  background-color: hsl(0, 0%, 100%);
+	background-color: hsl(0, 0%, 100%);
 }
 
 .input {
@@ -26,7 +26,7 @@
 }
 
 .input.custom {
-  text-align: center;
+	text-align: center;
 }
 
 .custom {
@@ -65,7 +65,6 @@
 	grid-template-columns: repeat(2, 1fr);
 	gap: 1rem;
 	justify-items: stretch;
-
 }
 
 .btn,
@@ -135,7 +134,7 @@
 	}
 
 	.tip-form > * {
-    width: 80%;
+		width: 80%;
 		justify-self: center;
 	}
 
@@ -150,53 +149,54 @@
 }
 
 @media screen and (min-width: 1200px) {
-  body {
-    height: 100vh;
-    background-color: hsl(185, 41%, 84%);
-  }
-  
-  .section {
-    background-color: hsl(185, 41%, 84%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+	body {
+		height: 100vh;
+		background-color: hsl(185, 41%, 84%);
+	}
 
-  .section-wrapper {
-    background-color: hsl(0, 0%, 100%);
-    display: flex;
-    width: 80%;
-    border-radius: 10px;
-  }
+	.section {
+		background-color: hsl(185, 41%, 84%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
-  .section-wrapper > * {
-    width: 50%;
-    margin: 1.5rem;
-  }
+	.section-wrapper {
+		background-color: hsl(0, 0%, 100%);
+		display: flex;
+		width: 80%;
+		border-radius: 10px;
+	}
 
-  .tip-form {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
-  }
+	.section-wrapper > * {
+		width: 50%;
+		margin: 1.5rem;
+	}
 
-  .btn, .custom {
-    width: 100%;
-  }
+	.tip-form {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0.5rem;
+	}
 
-  .attribution {
-    background-color: hsl(185, 41%, 84%);
-  }
+	.btn,
+	.custom {
+		width: 100%;
+	}
 
-  .result-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
- .reset {
-  margin: 0;
- }
- .result-section {
-  margin: 0 auto;
- }
+	.attribution {
+		background-color: hsl(185, 41%, 84%);
+	}
+
+	.result-wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.reset {
+		margin: 0;
+	}
+	.result-section {
+		margin: 0 auto;
+	}
 }
