@@ -25,6 +25,10 @@
 	height: 2rem;
 }
 
+.input.custom {
+  text-align: center;
+}
+
 .custom {
 	color: hsl(186, 14%, 43%);
 }
@@ -146,6 +150,11 @@
 }
 
 @media screen and (min-width: 1200px) {
+  body {
+    height: 100vh;
+    background-color: hsl(185, 41%, 84%);
+  }
+  
   .section {
     background-color: hsl(185, 41%, 84%);
     display: flex;
