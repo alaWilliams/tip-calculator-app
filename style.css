@@ -140,6 +140,7 @@
 
 	.result-section {
 		max-width: 20rem;
+		margin: 0 auto;
 	}
 
 	.reset {
@@ -198,5 +199,9 @@
 	}
 	.result-section {
 		margin: 0 auto;
+	}
+
+	.result > * {
+		margin-top: 1rem;
 	}
 }

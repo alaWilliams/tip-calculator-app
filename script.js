@@ -26,7 +26,6 @@ billInput.addEventListener('change', () => {
 		split.total = Number(billInput.value).toFixed(2) / 1;
 		calculateTip();
 		totalPerPerson();
-		console.log(split);
 	} else {
 		billInput.style.border = 'none';
 		split.total = Number(billInput.value).toFixed(2) / 1;
@@ -110,17 +109,14 @@ custom.addEventListener('change', () => {
 const calculateTip = () => {
 	if (split.people <= 0 || split.total <= 0) {
 		tipAmount.innerText = '$0';
-		console.log(split);
 	}
 	if (split.tip === 0 && split.total > 0 && split.people > 0) {
 		const tipPerPerson = 0;
 		tipAmount.innerText = `$${tipPerPerson}`;
-		console.log(split);
 	}
 	if (split.total > 0 && split.people > 0 && split.tip > 0) {
 		const tipPerPerson = ((split.total * split.tip) / split.people).toFixed(2);
 		tipAmount.innerText = `$${tipPerPerson}`;
-		console.log(split);
 	}
 };
 
@@ -154,5 +150,4 @@ resetBtn.addEventListener('click', () => {
 });
 
 calculateTip();
-
 totalPerPerson();
